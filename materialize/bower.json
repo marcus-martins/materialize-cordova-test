@@ -1,0 +1,23 @@
+{
+  "name": "Materialize Test",
+  "authors": [
+    "Marcus Martins <marcusvmartins@gmail.com>"
+  ],
+  "description": "Materialize",
+  "main": "./www/index.html",
+  "moduleType": [],
+  "license": "-",
+  "homepage": "www.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "Materialize": "materialize#^0.97.5",
+    "jquery": "^2.2.1"
+  }
+}
