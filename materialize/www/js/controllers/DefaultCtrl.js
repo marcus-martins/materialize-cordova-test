@@ -11,6 +11,12 @@
     DefaultCtrl.$inject = [ '$scope', '$state' ];
 
     function DefaultCtrl ($scope, $state) {
-
+        $scope.showMenu = function () {
+            if ($scope.current !== undefined) {
+                return $scope.current.stateName !== 'app.information';
+            } else {
+                return true;
+            }
+        }
     }
 }) ();

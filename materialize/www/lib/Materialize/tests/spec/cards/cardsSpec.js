@@ -2,10 +2,10 @@ describe( "Cards", function () {
   var reveal;
 
   beforeEach(function() {
-    loadFixtures('cards.html/cardsFixture.html');
+    loadFixtures('repositories.html/cardsFixture.html');
   });
 
-  describe("reveal cards.html", function () {
+  describe("reveal repositories.html", function () {
     var revealCard;
 
     beforeEach(function() {
@@ -35,7 +35,7 @@ describe( "Cards", function () {
     });
   });
 
-  describe("image cards.html", function () {
+  describe("image repositories.html", function () {
     var imageCard;
 
     beforeEach(function() {
@@ -51,7 +51,7 @@ describe( "Cards", function () {
   });
 
 
-  describe("sized cards.html", function () {
+  describe("sized repositories.html", function () {
     var small, medium, large;
 
     beforeEach(function() {

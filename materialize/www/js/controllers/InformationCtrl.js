@@ -8,10 +8,11 @@
         .module('MaterializeApp')
         .controller('InformationCtrl', InformationCtrl);
 
-    InformationCtrl.$inject = [ '$scope', '$state', 'RequestService', '$stateParams', 'Config' ];
+    InformationCtrl.$inject = [ '$stateParams', '$scope', 'RequestService', 'Config' ];
 
-    function InformationCtrl ($stateParams) {
-        console.log($stateParams.userId);
+    function InformationCtrl ($stateParams, $scope) {
+
+        $scope.idUser = "ID do Repositório: " + $stateParams.idUser;
     }
 
 }) ();

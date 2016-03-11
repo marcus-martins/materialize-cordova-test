@@ -24,7 +24,7 @@
                 url: "/cards",
                 views: {
                     'dataContent': {
-                        templateUrl: "views/cards.html",
+                        templateUrl: "views/repositories.html",
                         controller: "CardsCtrl"
                     }
                 }
@@ -39,7 +39,7 @@
                 }
             })
             .state('app.information', {
-                url: "/information/:userId",
+                url: "/information/:idUser",
                 views: {
                     'dataContent': {
                         templateUrl: "views/information.html",

@@ -6,11 +6,11 @@
 
     angular
         .module('MaterializeApp')
-        .controller('MenuCtrl', DefaultCtrl);
+        .controller('MenuCtrl', MenuCtrl);
 
-    DefaultCtrl.$inject = [ '$scope', '$state' ];
+    MenuCtrl.$inject = [ '$scope', '$state' ];
 
-    function DefaultCtrl ($scope, $state) {
+    function MenuCtrl ($scope, $state) {
         $('.button-collapse').sideNav();
 
         $(document).ready(function(){
