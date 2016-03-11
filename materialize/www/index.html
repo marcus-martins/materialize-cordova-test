@@ -2,12 +2,13 @@
 <html ng-app="MaterializeApp">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://i60.tinypic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: * 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="lib/Materialize/dist/css/materialize.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/index.css"  media="screen,projection"/>
@@ -15,39 +16,20 @@
 </head>
 <body>
 
-<div id="wrapper">
-    <ul id="slide-out" class="side-nav">
-        <li><a href="#!">First Sidebar Link</a></li>
-        <li><a href="#!">Second Sidebar Link</a></li>
-    </ul>
-    <nav class="indigo darken-4 toolbar">
-        <ul class="left hide-on-med-and-down">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="menu-padding mdi-navigation-menu"></i></a>
-        <i class="title-toolbar">Materialize</i>
-    </nav>
-
-    <div class="col s12 tabs">
-        <ul class="tabs indigo darken-4">
-            <li class="tab col s12" ng-class="{indicator: $state.current.name === 'cards'}"><a href="#/cards">CARDS</a></li>
-            <li class="tab col s12" ng-class="{indicator: $state.current.name === 'cards2'}"><a href="#/cards2">INFORMAÇÕES</a></li>
-            <li class="tab col s12" ng-class="{indicator: $state.current.name === 'cards3'}"><a href="#/cards3">CONTEÚDO</a></li>
-        </ul>
-    </div>
-
-    <div id="container" ui-view="appContent" class="container"></div>
-
-</div>
+<div ui-view></div>
 
 <script type="text/javascript" src="cordova.js"></script>
 <script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="lib/jquery/dist/jquery.js"></script>
 <script src="lib/Materialize/dist/js/materialize.js"></script>
-<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="js/app.js"></script>
-<script src="js/controllers/TabsCtrl.js"></script>
+<script src="js/services/Config.js"></script>
+<script src="js/services/RequestService.js"></script>
+<script src="js/controllers/MenuCtrl.js"></script>
+<script src="js/controllers/DefaultCtrl.js"></script>
+<script src="js/controllers/CardsCtrl.js"></script>
+<script src="js/controllers/InformationCtrl.js"></script>
 
 </body>
 </html>

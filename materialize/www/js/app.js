@@ -4,31 +4,46 @@
 (function() {
     'use strict';
 
-    angular.module('MaterializeApp',['ui.router'])
+    angular.module('MaterializeApp', ['ui.router'])
         .config(configApp)
         .run(runApp);
 
     configApp.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function configApp ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/cards");
+       $urlRouterProvider.otherwise("/app/cards");
 
         $stateProvider
-            .state('cards', {
+            .state('app', {
+                url: "/app",
+                templateUrl: "views/menu.html",
+                controller: "MenuCtrl",
+                abstract: true
+            })
+            .state('app.cards', {
                 url: "/cards",
                 views: {
-                    'appContent': {
+                    'dataContent': {
                         templateUrl: "views/cards.html",
-                        controller: "TabsCtrl"
+                        controller: "CardsCtrl"
                     }
                 }
             })
-            .state('cards2', {
+            .state('app.cards2', {
                 url: "/cards2",
                 views: {
-                    'appContent': {
+                    'dataContent': {
                         templateUrl: "views/cards2.html",
-                        controller: "TabsCtrl"
+                        controller: "DefaultCtrl"
+                    }
+                }
+            })
+            .state('app.information', {
+                url: "/information/:userId",
+                views: {
+                    'dataContent': {
+                        templateUrl: "views/information.html",
+                        controller: "InformationCtrl"
                     }
                 }
             });

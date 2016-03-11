@@ -1,41 +1,24 @@
-<div class="card small">
-    <div class="card-image">
-        <img src="http://i60.tinypic.com/iw6kh2.jpg">
-        <span class="card-title">Título do Cartão</span>
+<ul class="collection" ng-if="!showLoader">
+    <li class="collection-item avatar" ng-repeat="star in stars.items">
+        <img ng-src="{{ star.owner.avatar_url }}" alt="" class="circle">
+        <span class="title">{{ star.name | limitTo: 16 }}</span>
+        <p>Forks: {{ star.forks_count }} <br>
+            {{ star.description }}
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">{{ star.stargazers_count }} Stars</i></a>
+    </li>
+</ul>
+
+<div class="center-align">
+<div class="preloader-wrapper big active" ng-if="showLoader">
+    <div class="spinner-layer spinner-blue-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+    </div><div class="circle-clipper right">
+        <div class="circle"></div>
     </div>
-    <div class="card-content">
-        <p>Eu sou um cartão muito simples. Eu sou bom para conter pequenas informações. Eu sou conveniente por que eu preciso de muito pouca marcação para ser usado efetivamente.</p>
-    </div>
-    <div class="card-action">
-        <a href="#">Isto é um link</a>
-        <a href="#">Isto é um link</a>
     </div>
 </div>
-
-<div class="card small">
-    <div class="card-image">
-        <img src="http://i60.tinypic.com/iw6kh2.jpg">
-        <span class="card-title">Título do Cartão</span>
-    </div>
-    <div class="card-content">
-        <p>Eu sou um cartão muito simples. Eu sou bom para conter pequenas informações. Eu sou conveniente por que eu preciso de muito pouca marcação para ser usado efetivamente.</p>
-    </div>
-    <div class="card-action">
-        <a href="#">Isto é um link</a>
-        <a href="#">Isto é um link</a>
-    </div>
-</div>
-
-<div class="card small">
-    <div class="card-image">
-        <img src="http://i60.tinypic.com/iw6kh2.jpg">
-        <span class="card-title">Título do Cartão</span>
-    </div>
-    <div class="card-content">
-        <p>Eu sou um cartão muito simples. Eu sou bom para conter pequenas informações. Eu sou conveniente por que eu preciso de muito pouca marcação para ser usado efetivamente.</p>
-    </div>
-    <div class="card-action">
-        <a href="#">Isto é um link</a>
-        <a href="#">Isto é um link</a>
-    </div>
 </div>

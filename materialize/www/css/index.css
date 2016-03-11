@@ -16,16 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+@media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        line-height: 54px;
+    }
+}
+
 .menu-padding {
     padding-left: 16px;
-}
-
-.tabs .tab a {
-    color: #fafafa;
-}
-
-.tabs {
-    background-color: #ee6e73;
 }
 
 nav .button-collapse i {
@@ -49,8 +47,21 @@ nav .button-collapse i {
 .tabs {
     position: fixed;
     top: 55px;
+    left: 0;
     width: 100%;
     z-index: 9;
+}
+
+.tabs .tab a:hover {
+    color: #fafafa;
+}
+
+.tabs .tab a {
+    color: #fafafa;
+}
+
+.tabs .indicator {
+    background-color: #fafafa;
 }
 
 .container {
@@ -63,6 +74,8 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    overflow: auto;
+    background-color: #f5f5f5;
 }
 
 #wrapper {
@@ -70,14 +83,5 @@ html, body {
     height: 100%;
     margin: auto;
     position: relative;
+    overflow: auto;
 }
-
-#content {
-    position:absolute;
-    bottom:0px;
-    top: 40px;
-    width:100%;
-    overflow: scroll;
-    background-color: #fff;
-    color: #666;
-}​
