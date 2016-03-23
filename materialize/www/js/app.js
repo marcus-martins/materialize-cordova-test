@@ -11,7 +11,7 @@
     configApp.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function configApp ($stateProvider, $urlRouterProvider) {
-       $urlRouterProvider.otherwise("/app/cards");
+       $urlRouterProvider.otherwise("/app/repositories");
 
         $stateProvider
             .state('app', {
@@ -20,12 +20,12 @@
                 controller: "MenuCtrl",
                 abstract: true
             })
-            .state('app.cards', {
-                url: "/cards",
+            .state('app.repositories', {
+                url: "/repositories",
                 views: {
                     'dataContent': {
                         templateUrl: "views/repositories.html",
-                        controller: "CardsCtrl"
+                        controller: "RepositoriesCtrl"
                     }
                 }
             })

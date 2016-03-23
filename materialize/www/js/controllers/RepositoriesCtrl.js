@@ -6,11 +6,11 @@
 
     angular
         .module('MaterializeApp')
-        .controller('CardsCtrl', CardsCtrl);
+        .controller('RepositoriesCtrl', RepositoriesCtrl);
 
-    CardsCtrl.$inject = [ '$scope', 'RequestService', 'Config' ];
+    RepositoriesCtrl.$inject = [ '$scope', 'RequestService', 'Config' ];
 
-    function CardsCtrl ($scope, RequestService, Config) {
+    function RepositoriesCtrl ($scope, RequestService, Config) {
         $scope.showLoader = true;
 
         RequestService.getApiResults(Config.APIURL + Config.ENDPOINT.TOPSTARS) .then(function (data) {
